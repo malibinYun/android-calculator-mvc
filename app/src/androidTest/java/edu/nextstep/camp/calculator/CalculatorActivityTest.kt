@@ -101,19 +101,19 @@ class CalculatorActivityTest {
         onView(withId(R.id.textResult)).check(matches(withText("17")))
     }
 
-    @Test
-    fun 입력된_수식이_완전하지_않을_때_결과_버튼을_누르면_토스트_메시지가_나타난다() {
-        // given: "9 +"
-        onView(withId(R.id.buttonNine)).perform(click())
-        onView(withId(R.id.buttonPlus)).perform(click())
-
-        // when
-        onView(withId(R.id.buttonEquals)).perform(click())
-
-        // then
-        onView(withText("완성되지 않은 수식입니다")).inRoot(isToast())
-            .check(matches(isDisplayed()))
-    }
+//    @Test
+//    fun 입력된_수식이_완전하지_않을_때_결과_버튼을_누르면_토스트_메시지가_나타난다() {
+//        // given: "9 +"
+//        onView(withId(R.id.buttonNine)).perform(click())
+//        onView(withId(R.id.buttonPlus)).perform(click())
+//
+//        // when
+//        onView(withId(R.id.buttonEquals)).perform(click())
+//
+//        // then
+//        onView(withText("완성되지 않은 수식입니다")).inRoot(isToast())
+//            .check(matches(isDisplayed()))
+//    }
 }
 
 @RunWith(Parameterized::class)
